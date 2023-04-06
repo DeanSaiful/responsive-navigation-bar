@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Responsive Navigation Bar</title>
+</head>
+<body>
+  <header>
+    <div id="brand"><a href="/">MyCompany</a></div>
+    <nav>
+      <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div id="mySidepanel" class="sidepanel">
+        <a href="#" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+      <button class="openbtn" onclick="openNav()"><i class="fa fa-bars"></i></button>
+    </nav>
+  </header>
+
+  <section id="section-1">
+    <h1>Heading 1</h1>
+  </section>
+  <section id="section-2">
+    <h1>Heading 2</h1>
+  </section>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidepanel").style.width = "50%";
+      document.body.classList.add("no-scroll");
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+      document.body.classList.remove("no-scroll");
+    }
+    
+  </script>
+</body>
+</html>
